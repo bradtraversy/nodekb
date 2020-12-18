@@ -85,16 +85,10 @@ app.get('*', function(req, res, next){
 
 // Home Route
 app.get('/', function(req, res){
-  Article.find({}, function(err, articles){
-    if(err){
-      console.log(err);
-    } else {
       res.render('index', {
         title:'Articles',
         articles: articles
       });
-    }
-  });
 });
 
 // Route Files
