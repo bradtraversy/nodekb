@@ -1,19 +1,19 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Article Schema
-let articleSchema = mongoose.Schema({
-  title:{
+const articleSchema = mongoose.Schema({
+  title: {
     type: String,
     required: true
   },
-  author:{
+  author: {
     type: String,
     required: true
   },
-  body:{
+  body: {
     type: String,
     required: true
   }
 });
-
-let Article = module.exports = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
+module.exports.Article = Article;
